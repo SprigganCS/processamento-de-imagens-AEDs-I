@@ -129,7 +129,7 @@ int main()
     fclose(arq);
    
 	
-	//interaÁ„o com o usu·rio
+	//intera√ß√£o com o usu√°rio
 	printf("Menu de opcoes:\n1 - Escurecer ou clarear\n2 - Binarizar\n3 - Gerar icone\n4 - Escurecer bordas\n5 - Eliminar ruido (filtro Passa Baixa)\n6 - Sair\n");
 	scanf("%d", &opcao_selecionada);
 	switch (opcao_selecionada) 
@@ -140,7 +140,7 @@ int main()
 			scanf("%d", &claro_escuro);
 			if(claro_escuro != 1){
 				if(claro_escuro != 2){
-						printf("Valor digitado inv·lido, digite um novo valor: ");
+						printf("Valor digitado inv√°lido, digite um novo valor: ");
 						scanf("%d", &claro_escuro);
 				}
 			}
@@ -385,11 +385,12 @@ int main()
 			break;	
 	}
 	
+	
 	//ESCRITA DO NOVO ARQUIVO
 	if(opcao_selecionada!=3)
 	{
 		arq_saida = fopen("saida.pgm", "w");
-	fprintf(arq_saida, "P2\n#_Criado_por:_AndrÈ_Neves_Medeiros\n%d %d\n%d\n", col, lin, escala);
+	fprintf(arq_saida, "P2\n#_Criado_por:_Andr√©_Neves_Medeiros\n%d %d\n%d\n", col, lin, escala);
 	for(i=0; i<lin; i++)
 	{
 		for(j=0; j<col; j++)
@@ -406,7 +407,7 @@ int main()
 	else
 	{
 		arq_saida = fopen("saida.pgm", "w");
-	fprintf(arq_saida, "P2\n#_Criado_por:_AndrÈ_Neves_Medeiros\n64 64\n255\n");
+	fprintf(arq_saida, "P2\n#_Criado_por:_Andr√©_Neves_Medeiros\n64 64\n255\n");
 	for(i=0; i<64; i++)
 	{
 		for(j=0; j<64; j++)
